@@ -1,0 +1,148 @@
+_id: spc_2e8a1c5eebcf47e694ad8d5bc1b2e007
+contentType: yaml
+contents: "openapi: 3.0.1
+
+  info:
+
+  \  title: Swagger Petstore
+
+  \  description: 'This is a sample server Petstore server.  You can find out
+  more about     Swagger
+
+  \    at [http://swagger.io](http://swagger.io) or on [irc.freenode.net,
+  #swagger](http://swagger.io/irc/).      For
+
+  \    this sample, you can use the api key `special-key` to test the
+  authorization     filters.'
+
+
+  \  contact:
+
+  \    email: apiteam@swagger.io
+
+  \  license:
+
+  \    name: Apache 2.0
+
+  \    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+  \  version: 1.0.0
+
+  externalDocs:
+
+  \  description: Find out more about Swagger
+
+  \  url: http://swagger.io
+
+  servers:
+
+  - url: https://petstore.swagger.io/v2
+
+  - url: http://petstore.swagger.io/v2
+
+  tags:
+
+  - name: pet
+
+  \  description: Everything about your Pets
+
+  \  externalDocs:
+
+  \    description: Find out more
+
+  \    url: http://swagger.io
+
+  - name: store
+
+  \  description: Access to Petstore orders
+
+  - name: user
+
+  \  description: Operations about user
+
+  \  externalDocs:
+
+  \    description: Find out more about our store
+
+  \    url: http://swagger.io
+
+  paths:
+
+  \  /pet:
+
+  \    put:
+
+  \      tags:
+
+  \      - pet
+
+  \      summary: Update an existing pet
+
+  \      operationId: updatePet
+
+  \      requestBody:
+
+  \        description: Pet object that needs to be added to the store
+
+  \        content:
+
+  \          application/json:
+
+  \            schema:
+
+  \              type: object
+
+  \              properties:
+
+  \                id:
+
+  \                  type: integer
+
+  \                  format: int64
+
+  \                  example: 123
+
+  \                name:
+
+  \                  type: string
+
+  \                  example: derek
+
+  \        required: true
+
+  \      responses:
+
+  \        '400':
+
+  \          description: Invalid ID supplied
+
+  \          content: {}
+
+  \        '404':
+
+  \          description: Pet not found
+
+  \          content: {}
+
+  \        '405':
+
+  \          description: Validation exception
+
+  \          content: {}
+
+  \      security:
+
+  \      - petstore_auth:
+
+  \        - write:pets
+
+  \        - read:pets
+
+  \      x-codegen-request-body-name: body
+
+  \  "
+created: 1599053306115
+fileName: Insomnia Designer
+modified: 1599218055977
+parentId: wrk_a1c0ef6aec924a16ad0a2462495e1f99
+type: ApiSpec
